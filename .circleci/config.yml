@@ -1,13 +1,12 @@
 version: 2.1 
  
 orbs:
-  win: circleci/windows@2.2.0
+  slack: circleci/slack@4.4.4
  
-jobs:
-  build: 
-    executor:
-      name: win/default 
-      size: "medium" 
+workflows:
+    example-workflow:
+      jobs:
+        - slack/on-hold
  
     steps:
       - checkout      
